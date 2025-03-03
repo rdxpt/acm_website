@@ -1,0 +1,9 @@
+deployment:
+  tasks:
+    - export NODE_VERSION=16
+    - export NPM_VERSION=latest
+    - /usr/local/bin/nvm use $NODE_VERSION
+    - cd ~/repositories/acm_website
+    - npm install
+    - npm run build
+    - npm run start
